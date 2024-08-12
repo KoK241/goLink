@@ -5,6 +5,16 @@ import links from "./links.json";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    index : true,
+    element: (
+      <div>
+        <h1>Welcome to the Redirect App</h1>
+        <span>[Created By Mostafa 😊]</span>
+      </div>
+    ),
+  },
+  {
     path: "/redirect",
     element: <RedirectComponent url={links.REDIRECT} />,
   },
@@ -15,15 +25,6 @@ const router = createBrowserRouter([
   {
     path: "/opt-down",
     element: <RedirectComponent url={links.OPTDOWN} />,
-  },
-  {
-    path: "/",
-    element: (
-      <div>
-        <h1>Welcome to the Redirect App</h1>
-        <span>[Created By Mostafa 😊]</span> 
-      </div>
-    ),
   },
   {
     path: "*",
