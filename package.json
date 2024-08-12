@@ -1,6 +1,6 @@
 {
   "name": "react-javascript",
-  "homepage": "https://KoK241.github.io/GoToOffer",
+  "homepage": "https://KoK241.github.io/goLink",
   "version": "1.0.0",
   "type": "module",
   "description": "React TypeScript on Replit, using Vite bundler",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
