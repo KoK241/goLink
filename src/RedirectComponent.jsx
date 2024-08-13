@@ -1,16 +1,5 @@
-import { useState, useEffect } from "react";
-
 const RedirectComponent = ({ url }) => {
-  const [redirecting, setRedirecting] = useState(false);
-
-  useEffect(() => {
-    setRedirecting(true);
-    setTimeout(() => {
-      window.open(url, '_self');
-    }, 100);
-  }, [url]);
-
-  return redirecting ? null : <div>Please wait ...</div>;
+  return <meta httpEquiv="refresh" content={`0;URL=${url}`} />;
 };
 
 export default RedirectComponent;
