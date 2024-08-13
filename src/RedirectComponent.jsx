@@ -1,11 +1,16 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const RedirectComponent = ({ url }) => {
+  const [redirecting, setRedirecting] = useState(false);
+
   useEffect(() => {
-    window.location.href = url;
+    setRedirecting(true);
+    setTimeout(() => {
+      window.location.href = url;
+    }, 0);
   }, [url]);
 
-  return <div>Please wait ...</div>;
+  return redirecting ? null : <div>Please wait ...</div>;
 };
 
 export default RedirectComponent;
