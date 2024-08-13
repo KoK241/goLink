@@ -6,8 +6,8 @@ const RedirectComponent = ({ url }) => {
   useEffect(() => {
     setRedirecting(true);
     setTimeout(() => {
-      window.location.href = url;
-    }, 0);
+      window.open(url, '_self');
+    }, 100);
   }, [url]);
 
   return redirecting ? null : <div>Please wait ...</div>;
