@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const RedirectComponent = ({ url }) => {
   useEffect(() => {
     window.location.href = url;
   }, [url]);
 
-  return null;
+  return <div>Please wait ...</div>;
 };
 
 export default RedirectComponent;
